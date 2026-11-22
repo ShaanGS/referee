@@ -1,0 +1,1 @@
+Compute and reply in the receiving thread. With QNX message passing the server thread inherits the plant's priority while it handles the message, so the priority-20 background load can't delay it, and each reply is computed from the sample it answers.

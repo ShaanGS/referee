@@ -1,0 +1,45 @@
+# Referee spec. Deliberately adversarial example: see src/controller.c.
+
+[target]
+host = "127.0.0.1"
+port = 2222
+user = "qnxuser"
+
+[build]
+command = "make"
+artifact = "build/controller"
+
+[run]
+duration_s = 10
+warmup_s = 0.5            # first 0.5 s not judged (startup)
+
+[realtime_loop]
+name = "referee/controller"
+rate_hz = 1000
+deadline_us = 200
+max_missed = 0
+p99_latency_us = 120
+plant_priority = 40
+
+[realtime_loop.load]
+enabled = true
+threads = 0               # 0 = one per CPU
+priority = 20
+duty = 0.9
+
+[model]
+kind = "pid"
+kp = 2.0
+ki = 40.0
+kd = 0.001
+plant_gain = 1.0
+plant_tau_s = 0.05
+u_min = -10.0
+u_max = 10.0
+tolerance = 1e-3
+
+[no_crash]
+enabled = true
+
+[protected]
+paths = ["referee.toml", "tests/**"]

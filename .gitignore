@@ -1,0 +1,17 @@
+# QNX SDK files and target images never go in git (license + size)
+qnx800/
+qnxtarget/
+*.vmdk
+disk-qemu
+ifs.bin
+# build outputs and run evidence
+build/
+evidence/
+*.o
+# local secrets / keys
+.env
+*.key
+referee_qnx*
+__pycache__/
+# scratch copies of example projects for agent runs
+work/

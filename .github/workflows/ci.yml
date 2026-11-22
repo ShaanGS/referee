@@ -1,0 +1,62 @@
+name: ci
+
+# What runs here: everything that doesn't need QNX. The target-side suite
+# (tests/run_all.sh) needs QNX SDP 8.0 and a QEMU target, so it runs locally;
+# see CONTRIBUTING.md.
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  host-tests:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ["3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Unit tests (analysis, tamper guard, signing, redaction, agent config)
+        run: python -m unittest discover -s tests -p 'test_*.py' -v
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Python compiles
+        run: python -m compileall -q referee tests
+      - name: Shell scripts parse
+        run: |
+          for f in $(git ls-files '*.sh') bin/referee; do bash -n "$f" || exit 1; done
+      - name: Scripts are executable in git
+        # docs/demo/ holds signed evidence (run.sh there is a record of what ran, not a tool)
+        run: |
+          bad=$(git ls-files -s bin/referee $(git ls-files '*.sh' ':!docs/demo/**') | awk '$1 != "100755" {print $4}')
+          [ -z "$bad" ] || { echo "not executable: $bad"; exit 1; }
+      - name: CLI starts
+        run: sh bin/referee --help
+
+  evidence:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Verify the published evidence sample against the published key
+        run: sh bin/referee verify docs/demo/evidence-pass --signer docs/demo/referee-signer.pub
+      - name: A tampered copy must be rejected
+        run: |
+          cp -r docs/demo/evidence-pass /tmp/forged
+          sed -i 's/"verdict": "PASS"/"verdict": "FAIL"/' /tmp/forged/verdict.json
+          if sh bin/referee verify /tmp/forged --signer docs/demo/referee-signer.pub; then
+            echo "forged evidence verified"; exit 1
+          fi

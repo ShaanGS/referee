@@ -1,0 +1,4 @@
+# Signed evidence must stay byte-identical, or its hashes stop matching.
+docs/demo/** -text
+*.sh text eol=lf
+bin/referee text eol=lf

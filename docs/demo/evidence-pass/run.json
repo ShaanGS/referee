@@ -1,0 +1,8 @@
+{
+  "plant_rc": 0,
+  "controller_alive": true,
+  "controller_user": "user1",
+  "controller_priority_samples": 0,
+  "controller_max_priority": null,
+  "controller_max_active_priority": null
+}

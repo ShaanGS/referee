@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Report a way to fool Referee (private)
+    url: https://github.com/ShaanGS/referee/security/advisories/new
+    about: Verdict forgery, sandbox escapes, evidence tampering. Please don't post these publicly.
+  - name: New to QNX? Start with the codelab
+    url: https://github.com/ShaanGS/referee/blob/main/codelab/README.md
+    about: Write the controller yourself, watch priority inheritance, then watch Referee catch a cheat.
