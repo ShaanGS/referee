@@ -314,7 +314,7 @@ int main(int argc, char **argv)
         default: usage();
         }
     }
-    if (hz <= 0 || secs <= 0 || hz > 20000 || deadline_us < 20 || deadline_us > 1e6) usage();
+    if (hz <= 0 || secs <= 0 || hz > 20000 || deadline_us < 50 || deadline_us > 1e6) usage();
     /* First probe at half the deadline: a controller that needs at most half its deadline
      * is then covered for any pause. Repeats every quarter deadline until the reply. */
     probe_first_ns = (long)(deadline_us * 500);

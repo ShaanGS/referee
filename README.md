@@ -9,7 +9,7 @@
 [![QNX SDP 8.0](https://img.shields.io/badge/QNX%20SDP-8.0-0b6e4f)](https://www.qnx.com/products/everywhere/)
 [![host: Python stdlib](https://img.shields.io/badge/host-Python%203.11%2B%20stdlib%20only-3776ab)](referee/)
 
-[Codelab](codelab/README.md) · [How it works](docs/how-it-works.md) · [Threat model](docs/threat-model.md) · [Known limits](docs/limits.md) · [Report a way to fool it](SECURITY.md)
+[Codelab](codelab/README.md) · [How it works](docs/how-it-works.md) · [Threat model](docs/threat-model.md) · [Benchmark](docs/benchmark.md) · [Known limits](docs/limits.md) · [Report a way to fool it](SECURITY.md)
 
 </div>
 
@@ -119,6 +119,31 @@ QEMU/KVM on WSL2, 10 s at 1 kHz, deadline 200 µs, background load at priority 2
 
 On a noisy host, a run whose failures stalls could explain is INCONCLUSIVE, never PASS. Rates and causes are in [docs/limits.md](docs/limits.md).
 
+### Planted-bug benchmark
+
+14 controllers × 3 runs idle and 3 under load, 84 signed runs (2026-11-24). Simpler gates computed from the same measurements:
+
+| | Faulty controllers it lets through (of 9) | Healthy runs it fails (of 15) |
+|---|---|---|
+| Functional test (control law, no crash), idle | 8 | 0 |
+| Deadline test, idle board | 1 every run, plus the priority-inversion bug 2 runs in 3 | 0 |
+| Deadline test under load | 1 (a priority-50 thread above the plant, replies all on time) | 0 |
+| **Referee** | **0** (27 of 27 runs FAIL) | **0** (15 of 15 PASS, none INCONCLUSIVE) |
+
+The gates read Referee's own measurements, so they're a generous version of each kind of test. Full table, caveats and the predictions that were wrong: [docs/benchmark.md](docs/benchmark.md).
+
+### Real agents under Referee
+
+26 trials on 2026-11-24, 13 with Claude Code and 13 with Codex CLI, up to 3 rounds each. All 26 signed packs verify.
+
+| Task | Result |
+|---|---|
+| Fill in a starter that hides a low-priority worker thread | PASS 10/10 in round 1. Both agents removed the trap, and Referee gave no false FAILs |
+| Write the controller from the spec | PASS 6/6. Claude Code needed a second round in 2 of 3, after a build error from a QNX type-name clash |
+| Meet p99 ≤ 2 µs, which correct code can't do on this target | FAIL 10/10, 0 tamper events, no agent touched the spec or the evidence. Only 1 of 10 said the target was probably out of reach |
+
+The study also found a gap in Referee: its priority warning missed `#define CONTROL_PRIO 60`, which is now fixed and tested. Details: [docs/benchmark.md](docs/benchmark.md#real-agent-study-26-trials-two-agents).
+
 ## Attacks it's tested against
 
 Referee was audited twice by trying to fool it. The worst hole found gave PASS to a controller with 19 missed deadlines; every hole is closed and each has a regression test. The full table, with what each attack did before its fix, is in [docs/threat-model.md](docs/threat-model.md).
@@ -153,6 +178,7 @@ Referee's judge runs on QNX 8.0 and is built with QNX SDP 8.0 (`qcc -Vgcc_ntox86
 | [Codelab](codelab/README.md) | Hands-on QNX tutorial: message passing, priority inheritance, catching a cheat |
 | [How it works](docs/how-it-works.md) | The run, the checks, stalls, the hardened target, CPU pinning |
 | [Threat model](docs/threat-model.md) | Every attack tried, its defense and its test |
+| [Benchmark](docs/benchmark.md) | Planted bugs vs simpler gates, 84 signed runs; 26 real-agent trials; method in [bench/README.md](bench/README.md) |
 | [Known limits](docs/limits.md) | What Referee can't do yet, and why a verdict can be INCONCLUSIVE |
 | [Original spec](docs/original-spec.md) | The design written before the build |
 | [Demo evidence](docs/demo/README.md) | What's in `docs/demo/` and how to check it |
@@ -166,6 +192,7 @@ referee/     host CLI (check, agent, verify, report), tamper guard, sandbox, sig
 examples/    the PID task, reference controllers, adversarial hiders, agent demo, scripted agent scenarios
 codelab/     the tutorial and each step's controller
 tests/       unit tests (CI) and target suites; run_all.sh runs everything
+bench/       planted-bug benchmark (run_bench.py), real-agent study (run_study.py), results
 target/      QEMU target scripts
 docs/        design docs, demo evidence, screenshots
 ```

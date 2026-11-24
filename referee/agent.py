@@ -9,6 +9,8 @@ from __future__ import annotations
 
 import json
 import os
+import platform
+import re
 import shutil
 import subprocess
 import time
@@ -67,7 +69,7 @@ class ClaudeBackend:
                 raise AgentError("claude CLI not found (set REFEREE_CLAUDE_CMD)")
         # File tools are scoped to the project directory. A bare "Read"/"Write" allow-rule
         # lets Claude Code touch ANY path, including Referee's baseline in ~/.referee
-        # (tests/run_reach.sh proves this stays closed). Anything not allowed here needs
+        # (tests/reach_test.py proves this stays closed). Anything not allowed here needs
         # an approval nobody can give in -p mode, so it is denied.
         # --setting-sources user / --strict-mcp-config: never load the WORKSPACE's own
         # Claude Code config. -p mode skips the folder-trust prompt, so a .claude/settings.json
@@ -96,6 +98,98 @@ class ClaudeBackend:
         return {"backend": self.name, "summary": out.get("result", ""), "turns": out.get("num_turns"),
                 "cost_usd": out.get("total_cost_usd"), "session_id": out.get("session_id"),
                 "seconds": round(time.time() - t0, 1)}
+
+
+class CodexBackend:
+    """Codex CLI headless (`codex exec`) with a workspace-write sandbox."""
+    name = "codex"
+
+    def __init__(self, model: str | None = None, effort: str | None = None):
+        self.model, self.effort = model, effort
+
+    def _cmd(self, project: Path) -> list[str]:
+        directory = str(project)
+        override = os.environ.get("REFEREE_CODEX_CMD")
+        if override:
+            base = override.split()
+        else:
+            native = shutil.which("codex")
+            if native and not native.startswith("/mnt/"):
+                base = [native]
+            elif "microsoft" in platform.release().lower() and (exe := shutil.which("codex.exe")):
+                if not re.match(r"^/mnt/[a-zA-Z](/|$)", directory):
+                    raise AgentError("Codex is only installed on Windows; put the project under /mnt/<drive>/")
+                try:
+                    directory = subprocess.run(["wslpath", "-w", directory], capture_output=True,
+                                               text=True, check=True).stdout.rstrip("\r\n")
+                except (OSError, subprocess.CalledProcessError) as e:
+                    raise AgentError(f"cannot convert Codex project path with wslpath: {e}") from e
+                base = [exe]
+            else:
+                raise AgentError("codex CLI not found (set REFEREE_CODEX_CMD)")
+        # Ignore user config (extra MCP servers and settings) to keep only built-in tools.
+        # Ignore user and workspace execpolicy rules. Without --trust, the workspace's
+        # .codex/ config is not loaded. Never bypass sandbox approvals or hook trust,
+        # or add writable directories. Shell writes stay in the workspace, with network
+        # access disabled. Ephemeral mode avoids writing session files outside the workspace.
+        args = ["exec", "--json", "--ephemeral", "--skip-git-repo-check", "--ignore-user-config",
+                "--ignore-rules", "--color", "never", "--sandbox", "workspace-write",
+                "-c", 'approval_policy="never"', "-c", "sandbox_workspace_write.network_access=false",
+                "-C", directory]
+        if base[-1].lower().endswith("codex.exe"):
+            # The Windows build needs its sandbox named explicitly: --ignore-user-config also
+            # drops the user's [windows] setting, and without it every shell call is refused
+            # (measured with codex-cli 0.169.0). This sandbox confines writes, NOT reads: the
+            # agent can read files outside the workspace, so its commands are logged.
+            args += ["-c", 'windows.sandbox="unelevated"']
+        if self.model:
+            args += ["-m", self.model]
+        if self.effort:
+            args += ["-c", f"model_reasoning_effort={json.dumps(self.effort)}"]
+        return base + args + ["-"]
+
+    def run(self, project: Path, prompt: str, round_no: int) -> dict:
+        t0 = time.monotonic()
+        p = subprocess.run(self._cmd(project), input=prompt, cwd=project, capture_output=True,
+                           text=True, timeout=1800)
+        summary, turns, actions = "", 0, []
+        session_id = tokens = None
+        completed = False
+        for line in p.stdout.splitlines():
+            try:
+                event = json.loads(line)
+            except json.JSONDecodeError:
+                continue
+            if not isinstance(event, dict):
+                continue
+            kind = event.get("type")
+            if kind == "thread.started":
+                session_id = event.get("thread_id")
+            elif kind == "item.completed":
+                item = event.get("item") or {}
+                if item.get("type") == "agent_message":
+                    summary = item.get("text", "")
+                else:
+                    turns += 1
+                    # Codex's sandbox confines writes, not reads: keep what it ran and which
+                    # files it changed in the signed pack so a reviewer can audit its reach.
+                    act = {"type": item.get("type")}
+                    if "command" in item:
+                        act["command"] = item["command"]
+                    if isinstance(item.get("changes"), list):
+                        act["paths"] = [c.get("path") for c in item["changes"] if isinstance(c, dict)]
+                    actions.append(act)
+            elif kind == "turn.completed":
+                completed = True
+                tokens = event.get("usage")
+            elif kind in ("turn.failed", "error"):
+                raise AgentError(f"codex reported {kind} (exit {p.returncode}): {p.stderr.strip()[:400]}")
+        if p.returncode or not completed:
+            reason = "codex exited unsuccessfully" if completed else "codex returned no turn.completed event"
+            raise AgentError(f"{reason} (exit {p.returncode}): {p.stderr.strip()[:400]}")
+        return {"backend": self.name, "summary": summary, "turns": turns, "cost_usd": None,
+                "session_id": session_id, "tokens": tokens, "actions": actions,
+                "seconds": round(time.monotonic() - t0, 1)}
 
 
 class ReplayBackend:

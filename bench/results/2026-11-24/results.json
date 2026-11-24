@@ -1,0 +1,2734 @@
+[
+  {
+    "name": "good",
+    "kind": "healthy",
+    "desc": "compute and reply in the receiving thread",
+    "rep": 1,
+    "idle": {
+      "verdict": "PASS",
+      "failed": [],
+      "pass": {
+        "deadline": true,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "0 missed of 9500 (late 0, skipped 0, errors 0)",
+        "p99 latency": "3.4 us",
+        "control law": "0 of 9456 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10007 ticks (no controller thread was running when sampled); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 0,
+      "p99_us": 3.3667461285286384,
+      "stalled_samples": 44,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/good/evidence/20261124-142054",
+      "run_id": "20261124-142054",
+      "error": null
+    },
+    "load": {
+      "verdict": "PASS",
+      "failed": [],
+      "pass": {
+        "deadline": true,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "0 missed of 9500 (late 0, skipped 0, errors 0)",
+        "p99 latency": "3.2 us",
+        "control law": "0 of 9460 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10007 ticks (no controller thread was running when sampled); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 0,
+      "p99_us": 3.1709674747610603,
+      "stalled_samples": 38,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/good/evidence/20261124-142112",
+      "run_id": "20261124-142112",
+      "error": null
+    },
+    "G1": true,
+    "G2": true,
+    "G3": true,
+    "Referee": "PASS"
+  },
+  {
+    "name": "good",
+    "kind": "healthy",
+    "desc": "compute and reply in the receiving thread",
+    "rep": 2,
+    "idle": {
+      "verdict": "PASS",
+      "failed": [],
+      "pass": {
+        "deadline": true,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "0 missed of 9500 (late 0, skipped 0, errors 0)",
+        "p99 latency": "3.2 us",
+        "control law": "0 of 9446 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10007 ticks (no controller thread was running when sampled); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 0,
+      "p99_us": 3.1656761597943692,
+      "stalled_samples": 54,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/good/evidence/20261124-142131",
+      "run_id": "20261124-142131",
+      "error": null
+    },
+    "load": {
+      "verdict": "PASS",
+      "failed": [],
+      "pass": {
+        "deadline": true,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "0 missed of 9500 (late 0, skipped 0, errors 0)",
+        "p99 latency": "3.3 us",
+        "control law": "0 of 9468 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10007 ticks (no controller thread was running when sampled); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 0,
+      "p99_us": 3.333822390958115,
+      "stalled_samples": 31,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/good/evidence/20261124-142149",
+      "run_id": "20261124-142149",
+      "error": null
+    },
+    "G1": true,
+    "G2": true,
+    "G3": true,
+    "Referee": "PASS"
+  },
+  {
+    "name": "good",
+    "kind": "healthy",
+    "desc": "compute and reply in the receiving thread",
+    "rep": 3,
+    "idle": {
+      "verdict": "PASS",
+      "failed": [],
+      "pass": {
+        "deadline": true,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "0 missed of 9500 (late 0, skipped 0, errors 0)",
+        "p99 latency": "3.1 us",
+        "control law": "0 of 9455 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10007 ticks (no controller thread was running when sampled); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 0,
+      "p99_us": 3.1483324051813253,
+      "stalled_samples": 45,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/good/evidence/20261124-142208",
+      "run_id": "20261124-142208",
+      "error": null
+    },
+    "load": {
+      "verdict": "PASS",
+      "failed": [],
+      "pass": {
+        "deadline": true,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "0 missed of 9500 (late 0, skipped 0, errors 0)",
+        "p99 latency": "3.0 us",
+        "control law": "0 of 9426 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10007 ticks (no controller thread was running when sampled); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 0,
+      "p99_us": 2.9807740979027675,
+      "stalled_samples": 74,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/good/evidence/20261124-142227",
+      "run_id": "20261124-142227",
+      "error": null
+    },
+    "G1": true,
+    "G2": true,
+    "G3": true,
+    "Referee": "PASS"
+  },
+  {
+    "name": "codelab_step5",
+    "kind": "healthy",
+    "desc": "the codelab's PID step",
+    "rep": 1,
+    "idle": {
+      "verdict": "PASS",
+      "failed": [],
+      "pass": {
+        "deadline": true,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "0 missed of 9500 (late 0, skipped 0, errors 0)",
+        "p99 latency": "3.1 us",
+        "control law": "0 of 9459 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10007 ticks (no controller thread was running when sampled); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 0,
+      "p99_us": 3.0610257082309187,
+      "stalled_samples": 41,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/codelab_step5/evidence/20261124-142245",
+      "run_id": "20261124-142245",
+      "error": null
+    },
+    "load": {
+      "verdict": "PASS",
+      "failed": [],
+      "pass": {
+        "deadline": true,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "0 missed of 9500 (late 0, skipped 0, errors 0)",
+        "p99 latency": "3.1 us",
+        "control law": "0 of 9450 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10007 ticks (no controller thread was running when sampled); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 0,
+      "p99_us": 3.119230172864523,
+      "stalled_samples": 49,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/codelab_step5/evidence/20261124-142303",
+      "run_id": "20261124-142303",
+      "error": null
+    },
+    "G1": true,
+    "G2": true,
+    "G3": true,
+    "Referee": "PASS"
+  },
+  {
+    "name": "codelab_step5",
+    "kind": "healthy",
+    "desc": "the codelab's PID step",
+    "rep": 2,
+    "idle": {
+      "verdict": "PASS",
+      "failed": [],
+      "pass": {
+        "deadline": true,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "0 missed of 9500 (late 0, skipped 0, errors 0)",
+        "p99 latency": "2.9 us",
+        "control law": "0 of 9470 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10007 ticks (no controller thread was running when sampled); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 0,
+      "p99_us": 2.9093413458524346,
+      "stalled_samples": 30,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/codelab_step5/evidence/20261124-142321",
+      "run_id": "20261124-142321",
+      "error": null
+    },
+    "load": {
+      "verdict": "PASS",
+      "failed": [],
+      "pass": {
+        "deadline": true,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "0 missed of 9500 (late 0, skipped 0, errors 0)",
+        "p99 latency": "3.0 us",
+        "control law": "0 of 9458 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10007 ticks (no controller thread was running when sampled); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 0,
+      "p99_us": 3.0430940297326874,
+      "stalled_samples": 42,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/codelab_step5/evidence/20261124-142339",
+      "run_id": "20261124-142339",
+      "error": null
+    },
+    "G1": true,
+    "G2": true,
+    "G3": true,
+    "Referee": "PASS"
+  },
+  {
+    "name": "codelab_step5",
+    "kind": "healthy",
+    "desc": "the codelab's PID step",
+    "rep": 3,
+    "idle": {
+      "verdict": "PASS",
+      "failed": [],
+      "pass": {
+        "deadline": true,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "0 missed of 9500 (late 0, skipped 0, errors 0)",
+        "p99 latency": "2.9 us",
+        "control law": "0 of 9450 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10007 ticks (no controller thread was running when sampled); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 0,
+      "p99_us": 2.8831787329615723,
+      "stalled_samples": 46,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/codelab_step5/evidence/20261124-142358",
+      "run_id": "20261124-142358",
+      "error": null
+    },
+    "load": {
+      "verdict": "PASS",
+      "failed": [],
+      "pass": {
+        "deadline": true,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "0 missed of 9500 (late 0, skipped 0, errors 0)",
+        "p99 latency": "2.9 us",
+        "control law": "0 of 9446 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10007 ticks (no controller thread was running when sampled); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 0,
+      "p99_us": 2.926097176580291,
+      "stalled_samples": 54,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/codelab_step5/evidence/20261124-142417",
+      "run_id": "20261124-142417",
+      "error": null
+    },
+    "G1": true,
+    "G2": true,
+    "G3": true,
+    "Referee": "PASS"
+  },
+  {
+    "name": "codelab_step6",
+    "kind": "healthy",
+    "desc": "the codelab's step that records its own priority",
+    "rep": 1,
+    "idle": {
+      "verdict": "PASS",
+      "failed": [],
+      "pass": {
+        "deadline": true,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "0 missed of 9500 (late 0, skipped 0, errors 0)",
+        "p99 latency": "3.2 us",
+        "control law": "0 of 9439 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10007 ticks (no controller thread was running when sampled); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 0,
+      "p99_us": 3.1756708658425636,
+      "stalled_samples": 61,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/codelab_step6/evidence/20261124-142434",
+      "run_id": "20261124-142434",
+      "error": null
+    },
+    "load": {
+      "verdict": "PASS",
+      "failed": [],
+      "pass": {
+        "deadline": true,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "0 missed of 9500 (late 0, skipped 0, errors 0)",
+        "p99 latency": "3.1 us",
+        "control law": "0 of 9461 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10007 ticks (no controller thread was running when sampled); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 0,
+      "p99_us": 3.1301067647405,
+      "stalled_samples": 39,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/codelab_step6/evidence/20261124-142453",
+      "run_id": "20261124-142453",
+      "error": null
+    },
+    "G1": true,
+    "G2": true,
+    "G3": true,
+    "Referee": "PASS"
+  },
+  {
+    "name": "codelab_step6",
+    "kind": "healthy",
+    "desc": "the codelab's step that records its own priority",
+    "rep": 2,
+    "idle": {
+      "verdict": "PASS",
+      "failed": [],
+      "pass": {
+        "deadline": true,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "0 missed of 9500 (late 0, skipped 0, errors 0)",
+        "p99 latency": "4.3 us",
+        "control law": "0 of 9449 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10007 ticks (highest controller thread seen running: 40); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 0,
+      "p99_us": 4.3379963868590865,
+      "stalled_samples": 50,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/codelab_step6/evidence/20261124-142511",
+      "run_id": "20261124-142511",
+      "error": null
+    },
+    "load": {
+      "verdict": "PASS",
+      "failed": [],
+      "pass": {
+        "deadline": true,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "0 missed of 9500 (late 0, skipped 0, errors 0)",
+        "p99 latency": "3.1 us",
+        "control law": "0 of 9462 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10007 ticks (no controller thread was running when sampled); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 0,
+      "p99_us": 3.077781538958775,
+      "stalled_samples": 37,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/codelab_step6/evidence/20261124-142530",
+      "run_id": "20261124-142530",
+      "error": null
+    },
+    "G1": true,
+    "G2": true,
+    "G3": true,
+    "Referee": "PASS"
+  },
+  {
+    "name": "codelab_step6",
+    "kind": "healthy",
+    "desc": "the codelab's step that records its own priority",
+    "rep": 3,
+    "idle": {
+      "verdict": "PASS",
+      "failed": [],
+      "pass": {
+        "deadline": true,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "0 missed of 9500 (late 0, skipped 0, errors 0)",
+        "p99 latency": "3.2 us",
+        "control law": "0 of 9463 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10007 ticks (no controller thread was running when sampled); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 0,
+      "p99_us": 3.2297598632798525,
+      "stalled_samples": 37,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/codelab_step6/evidence/20261124-142548",
+      "run_id": "20261124-142548",
+      "error": null
+    },
+    "load": {
+      "verdict": "PASS",
+      "failed": [],
+      "pass": {
+        "deadline": true,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "0 missed of 9500 (late 0, skipped 0, errors 0)",
+        "p99 latency": "3.1 us",
+        "control law": "0 of 9457 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10007 ticks (no controller thread was running when sampled); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 0,
+      "p99_us": 3.107471695160765,
+      "stalled_samples": 43,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/codelab_step6/evidence/20261124-142607",
+      "run_id": "20261124-142607",
+      "error": null
+    },
+    "G1": true,
+    "G2": true,
+    "G3": true,
+    "Referee": "PASS"
+  },
+  {
+    "name": "healthy_mutex_inherit",
+    "kind": "healthy",
+    "desc": "shares a mutex with a priority-10 thread, with priority inheritance",
+    "rep": 1,
+    "idle": {
+      "verdict": "PASS",
+      "failed": [],
+      "pass": {
+        "deadline": true,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "0 missed of 9500 (late 0, skipped 0, errors 0)",
+        "p99 latency": "4.9 us",
+        "control law": "0 of 9451 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10007 ticks (highest controller thread seen running: 10); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 0,
+      "p99_us": 4.852723748341113,
+      "stalled_samples": 48,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/healthy_mutex_inherit/evidence/20261124-142625",
+      "run_id": "20261124-142625",
+      "error": null
+    },
+    "load": {
+      "verdict": "PASS",
+      "failed": [],
+      "pass": {
+        "deadline": true,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "0 missed of 9500 (late 0, skipped 0, errors 0)",
+        "p99 latency": "7.2 us",
+        "control law": "0 of 9454 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10007 ticks (highest controller thread seen running: 10); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 0,
+      "p99_us": 7.161500845474085,
+      "stalled_samples": 46,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/healthy_mutex_inherit/evidence/20261124-142643",
+      "run_id": "20261124-142643",
+      "error": null
+    },
+    "G1": true,
+    "G2": true,
+    "G3": true,
+    "Referee": "PASS"
+  },
+  {
+    "name": "healthy_mutex_inherit",
+    "kind": "healthy",
+    "desc": "shares a mutex with a priority-10 thread, with priority inheritance",
+    "rep": 2,
+    "idle": {
+      "verdict": "PASS",
+      "failed": [],
+      "pass": {
+        "deadline": true,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "0 missed of 9500 (late 0, skipped 0, errors 0)",
+        "p99 latency": "4.7 us",
+        "control law": "0 of 9469 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10007 ticks (highest controller thread seen running: 10); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 0,
+      "p99_us": 4.664588105080978,
+      "stalled_samples": 31,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/healthy_mutex_inherit/evidence/20261124-142700",
+      "run_id": "20261124-142700",
+      "error": null
+    },
+    "load": {
+      "verdict": "PASS",
+      "failed": [],
+      "pass": {
+        "deadline": true,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "0 missed of 9500 (late 0, skipped 0, errors 0)",
+        "p99 latency": "3.6 us",
+        "control law": "0 of 9461 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10007 ticks (highest controller thread seen running: 10); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 0,
+      "p99_us": 3.5789866510814785,
+      "stalled_samples": 39,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/healthy_mutex_inherit/evidence/20261124-142719",
+      "run_id": "20261124-142719",
+      "error": null
+    },
+    "G1": true,
+    "G2": true,
+    "G3": true,
+    "Referee": "PASS"
+  },
+  {
+    "name": "healthy_mutex_inherit",
+    "kind": "healthy",
+    "desc": "shares a mutex with a priority-10 thread, with priority inheritance",
+    "rep": 3,
+    "idle": {
+      "verdict": "PASS",
+      "failed": [],
+      "pass": {
+        "deadline": true,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "0 missed of 9500 (late 0, skipped 0, errors 0)",
+        "p99 latency": "4.5 us",
+        "control law": "0 of 9445 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10007 ticks (highest controller thread seen running: 10); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 0,
+      "p99_us": 4.480861890959752,
+      "stalled_samples": 54,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/healthy_mutex_inherit/evidence/20261124-142737",
+      "run_id": "20261124-142737",
+      "error": null
+    },
+    "load": {
+      "verdict": "PASS",
+      "failed": [],
+      "pass": {
+        "deadline": true,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "0 missed of 9500 (late 0, skipped 0, errors 0)",
+        "p99 latency": "3.4 us",
+        "control law": "0 of 9431 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10007 ticks (highest controller thread seen running: 10); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 0,
+      "p99_us": 3.416719658769612,
+      "stalled_samples": 69,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/healthy_mutex_inherit/evidence/20261124-142756",
+      "run_id": "20261124-142756",
+      "error": null
+    },
+    "G1": true,
+    "G2": true,
+    "G3": true,
+    "Referee": "PASS"
+  },
+  {
+    "name": "healthy_worker_at_plant_prio",
+    "kind": "healthy",
+    "desc": "hands off to a worker created at priority 40",
+    "rep": 1,
+    "idle": {
+      "verdict": "PASS",
+      "failed": [],
+      "pass": {
+        "deadline": true,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "0 missed of 9500 (late 0, skipped 0, errors 0)",
+        "p99 latency": "14.7 us",
+        "control law": "0 of 9455 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10006 ticks (no controller thread was running when sampled); fork/spawn locked for the run",
+        "monitor": "10006 ticks at prio 120; reply probe on"
+      },
+      "missed": 0,
+      "p99_us": 14.663409620471977,
+      "stalled_samples": 44,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/healthy_worker_at_plant_prio/evidence/20261124-142815",
+      "run_id": "20261124-142815",
+      "error": null
+    },
+    "load": {
+      "verdict": "PASS",
+      "failed": [],
+      "pass": {
+        "deadline": true,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "0 missed of 9500 (late 0, skipped 0, errors 0)",
+        "p99 latency": "6.7 us",
+        "control law": "0 of 9479 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10007 ticks (highest controller thread seen running: 40); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 0,
+      "p99_us": 6.674405906595891,
+      "stalled_samples": 20,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/healthy_worker_at_plant_prio/evidence/20261124-142833",
+      "run_id": "20261124-142833",
+      "error": null
+    },
+    "G1": true,
+    "G2": true,
+    "G3": true,
+    "Referee": "PASS"
+  },
+  {
+    "name": "healthy_worker_at_plant_prio",
+    "kind": "healthy",
+    "desc": "hands off to a worker created at priority 40",
+    "rep": 2,
+    "idle": {
+      "verdict": "PASS",
+      "failed": [],
+      "pass": {
+        "deadline": true,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "0 missed of 9500 (late 0, skipped 0, errors 0)",
+        "p99 latency": "6.9 us",
+        "control law": "0 of 9442 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10007 ticks (no controller thread was running when sampled); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 0,
+      "p99_us": 6.948378437093463,
+      "stalled_samples": 57,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/healthy_worker_at_plant_prio/evidence/20261124-142853",
+      "run_id": "20261124-142853",
+      "error": null
+    },
+    "load": {
+      "verdict": "PASS",
+      "failed": [],
+      "pass": {
+        "deadline": true,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "0 missed of 9500 (late 0, skipped 0, errors 0)",
+        "p99 latency": "6.1 us",
+        "control law": "0 of 9447 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10007 ticks (no controller thread was running when sampled); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 0,
+      "p99_us": 6.091479374432065,
+      "stalled_samples": 45,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/healthy_worker_at_plant_prio/evidence/20261124-142911",
+      "run_id": "20261124-142911",
+      "error": null
+    },
+    "G1": true,
+    "G2": true,
+    "G3": true,
+    "Referee": "PASS"
+  },
+  {
+    "name": "healthy_worker_at_plant_prio",
+    "kind": "healthy",
+    "desc": "hands off to a worker created at priority 40",
+    "rep": 3,
+    "idle": {
+      "verdict": "PASS",
+      "failed": [],
+      "pass": {
+        "deadline": true,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "0 missed of 9500 (late 0, skipped 0, errors 0)",
+        "p99 latency": "6.5 us",
+        "control law": "0 of 9445 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10007 ticks (no controller thread was running when sampled); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 0,
+      "p99_us": 6.4604016123874874,
+      "stalled_samples": 55,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/healthy_worker_at_plant_prio/evidence/20261124-142930",
+      "run_id": "20261124-142930",
+      "error": null
+    },
+    "load": {
+      "verdict": "PASS",
+      "failed": [],
+      "pass": {
+        "deadline": true,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "0 missed of 9500 (late 0, skipped 0, errors 0)",
+        "p99 latency": "6.6 us",
+        "control law": "0 of 9457 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10007 ticks (no controller thread was running when sampled); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 0,
+      "p99_us": 6.586511285760296,
+      "stalled_samples": 43,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/healthy_worker_at_plant_prio/evidence/20261124-142948",
+      "run_id": "20261124-142948",
+      "error": null
+    },
+    "G1": true,
+    "G2": true,
+    "G3": true,
+    "Referee": "PASS"
+  },
+  {
+    "name": "bug_worker_low_prio",
+    "kind": "bug",
+    "desc": "hands off to a worker at the default priority 10",
+    "rep": 1,
+    "idle": {
+      "verdict": "FAIL",
+      "failed": [
+        "deadline"
+      ],
+      "pass": {
+        "deadline": false,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "23 missed of 9500 (late 12, skipped 11, errors 0)",
+        "p99 latency": "28.7 us",
+        "control law": "0 of 9457 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10007 ticks (highest controller thread seen running: 10); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 23,
+      "p99_us": 28.699210493505845,
+      "stalled_samples": 31,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/bug_worker_low_prio/evidence/20261124-143007",
+      "run_id": "20261124-143007",
+      "error": null
+    },
+    "load": {
+      "verdict": "FAIL",
+      "failed": [
+        "deadline",
+        "p99 latency",
+        "monitor"
+      ],
+      "pass": {
+        "deadline": false,
+        "p99 latency": false,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": false
+      },
+      "measured": {
+        "deadline": "9104 missed of 9500 (late 178, skipped 1933, errors 0, never sent 3748, unexplained by stalls 3245)",
+        "p99 latency": "107275.3 us",
+        "control law": "0 of 557 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10790 ticks (highest controller thread seen running: 10); fork/spawn locked for the run",
+        "monitor": "10790 ticks at prio 120; reply probe on; 5525 probe wake-ups dropped (buffer full)"
+      },
+      "missed": 9104,
+      "p99_us": 107275.3406355516,
+      "stalled_samples": 14,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/bug_worker_low_prio/evidence/20261124-143025",
+      "run_id": "20261124-143025",
+      "error": null
+    },
+    "G1": true,
+    "G2": false,
+    "G3": false,
+    "Referee": "FAIL"
+  },
+  {
+    "name": "bug_worker_low_prio",
+    "kind": "bug",
+    "desc": "hands off to a worker at the default priority 10",
+    "rep": 2,
+    "idle": {
+      "verdict": "FAIL",
+      "failed": [
+        "deadline"
+      ],
+      "pass": {
+        "deadline": false,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "21 missed of 9500 (late 12, skipped 7, errors 0, unexplained by stalls 2)",
+        "p99 latency": "29.6 us",
+        "control law": "0 of 9449 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10007 ticks (highest controller thread seen running: 10); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 21,
+      "p99_us": 29.604613276695247,
+      "stalled_samples": 40,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/bug_worker_low_prio/evidence/20261124-143047",
+      "run_id": "20261124-143047",
+      "error": null
+    },
+    "load": {
+      "verdict": "FAIL",
+      "failed": [
+        "deadline",
+        "p99 latency"
+      ],
+      "pass": {
+        "deadline": false,
+        "p99 latency": false,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "8884 missed of 9500 (late 225, skipped 2332, errors 0, never sent 922, unexplained by stalls 5405)",
+        "p99 latency": "18019.5 us",
+        "control law": "0 of 809 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10400 ticks (highest controller thread seen running: 10); fork/spawn locked for the run",
+        "monitor": "10400 ticks at prio 120; reply probe on"
+      },
+      "missed": 8884,
+      "p99_us": 18019.512856869,
+      "stalled_samples": 20,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/bug_worker_low_prio/evidence/20261124-143105",
+      "run_id": "20261124-143105",
+      "error": null
+    },
+    "G1": true,
+    "G2": false,
+    "G3": false,
+    "Referee": "FAIL"
+  },
+  {
+    "name": "bug_worker_low_prio",
+    "kind": "bug",
+    "desc": "hands off to a worker at the default priority 10",
+    "rep": 3,
+    "idle": {
+      "verdict": "FAIL",
+      "failed": [
+        "deadline"
+      ],
+      "pass": {
+        "deadline": false,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "53 missed of 9500 (late 18, skipped 35, errors 0)",
+        "p99 latency": "29.1 us",
+        "control law": "0 of 9391 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10007 ticks (highest controller thread seen running: 10); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 53,
+      "p99_us": 29.075187818083524,
+      "stalled_samples": 74,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/bug_worker_low_prio/evidence/20261124-143128",
+      "run_id": "20261124-143128",
+      "error": null
+    },
+    "load": {
+      "verdict": "FAIL",
+      "failed": [
+        "deadline",
+        "p99 latency"
+      ],
+      "pass": {
+        "deadline": false,
+        "p99 latency": false,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "7261 missed of 9500 (late 1016, skipped 5358, errors 0, unexplained by stalls 887)",
+        "p99 latency": "12045.8 us",
+        "control law": "0 of 3221 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10061 ticks (highest controller thread seen running: 10); fork/spawn locked for the run",
+        "monitor": "10061 ticks at prio 120; reply probe on"
+      },
+      "missed": 7261,
+      "p99_us": 12045.816977747712,
+      "stalled_samples": 25,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/bug_worker_low_prio/evidence/20261124-143146",
+      "run_id": "20261124-143146",
+      "error": null
+    },
+    "G1": true,
+    "G2": false,
+    "G3": false,
+    "Referee": "FAIL"
+  },
+  {
+    "name": "bug_drops_priority",
+    "kind": "bug",
+    "desc": "lowers its own priority to 10 while handling a message",
+    "rep": 1,
+    "idle": {
+      "verdict": "FAIL",
+      "failed": [
+        "deadline"
+      ],
+      "pass": {
+        "deadline": false,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "15 missed of 9500 (late 12, skipped 3, errors 0)",
+        "p99 latency": "25.7 us",
+        "control law": "0 of 9455 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10007 ticks (highest controller thread seen running: 10); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 15,
+      "p99_us": 25.710205461210446,
+      "stalled_samples": 41,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/bug_drops_priority/evidence/20261124-143208",
+      "run_id": "20261124-143208",
+      "error": null
+    },
+    "load": {
+      "verdict": "FAIL",
+      "failed": [
+        "deadline",
+        "p99 latency"
+      ],
+      "pass": {
+        "deadline": false,
+        "p99 latency": false,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "9059 missed of 9500 (late 252, skipped 6844, errors 0, never sent 7, unexplained by stalls 1956)",
+        "p99 latency": "100986.8 us",
+        "control law": "0 of 648 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10100 ticks (highest controller thread seen running: 10); fork/spawn locked for the run",
+        "monitor": "10100 ticks at prio 120; reply probe on"
+      },
+      "missed": 9059,
+      "p99_us": 100986.83709060118,
+      "stalled_samples": 27,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/bug_drops_priority/evidence/20261124-143226",
+      "run_id": "20261124-143226",
+      "error": null
+    },
+    "G1": true,
+    "G2": false,
+    "G3": false,
+    "Referee": "FAIL"
+  },
+  {
+    "name": "bug_drops_priority",
+    "kind": "bug",
+    "desc": "lowers its own priority to 10 while handling a message",
+    "rep": 2,
+    "idle": {
+      "verdict": "FAIL",
+      "failed": [
+        "deadline"
+      ],
+      "pass": {
+        "deadline": false,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "10 missed of 9500 (late 7, skipped 3, errors 0)",
+        "p99 latency": "10.8 us",
+        "control law": "0 of 9459 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10007 ticks (highest controller thread seen running: 10); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 10,
+      "p99_us": 10.798691961189167,
+      "stalled_samples": 38,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/bug_drops_priority/evidence/20261124-143249",
+      "run_id": "20261124-143249",
+      "error": null
+    },
+    "load": {
+      "verdict": "FAIL",
+      "failed": [
+        "deadline",
+        "p99 latency"
+      ],
+      "pass": {
+        "deadline": false,
+        "p99 latency": false,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "9325 missed of 9500 (late 129, skipped 6743, errors 0, never sent 57, unexplained by stalls 2396)",
+        "p99 latency": "101069.2 us",
+        "control law": "0 of 251 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10051 ticks (highest controller thread seen running: 10); fork/spawn locked for the run",
+        "monitor": "10051 ticks at prio 120; reply probe on"
+      },
+      "missed": 9325,
+      "p99_us": 101069.16995148291,
+      "stalled_samples": 27,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/bug_drops_priority/evidence/20261124-143307",
+      "run_id": "20261124-143307",
+      "error": null
+    },
+    "G1": true,
+    "G2": false,
+    "G3": false,
+    "Referee": "FAIL"
+  },
+  {
+    "name": "bug_drops_priority",
+    "kind": "bug",
+    "desc": "lowers its own priority to 10 while handling a message",
+    "rep": 3,
+    "idle": {
+      "verdict": "FAIL",
+      "failed": [
+        "deadline"
+      ],
+      "pass": {
+        "deadline": false,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "24 missed of 9500 (late 14, skipped 10, errors 0)",
+        "p99 latency": "23.8 us",
+        "control law": "0 of 9451 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10007 ticks (highest controller thread seen running: 40); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 24,
+      "p99_us": 23.816208665077554,
+      "stalled_samples": 36,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/bug_drops_priority/evidence/20261124-143329",
+      "run_id": "20261124-143329",
+      "error": null
+    },
+    "load": {
+      "verdict": "FAIL",
+      "failed": [
+        "deadline",
+        "p99 latency"
+      ],
+      "pass": {
+        "deadline": false,
+        "p99 latency": false,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "9437 missed of 9500 (late 75, skipped 6898, errors 0, never sent 4, unexplained by stalls 2460)",
+        "p99 latency": "101109.7 us",
+        "control law": "0 of 89 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10009 ticks (highest controller thread seen running: 10); fork/spawn locked for the run",
+        "monitor": "10009 ticks at prio 120; reply probe on"
+      },
+      "missed": 9437,
+      "p99_us": 101109.71524033906,
+      "stalled_samples": 34,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/bug_drops_priority/evidence/20261124-143348",
+      "run_id": "20261124-143348",
+      "error": null
+    },
+    "G1": true,
+    "G2": false,
+    "G3": false,
+    "Referee": "FAIL"
+  },
+  {
+    "name": "bug_mutex_no_inherit",
+    "kind": "bug",
+    "desc": "shares a mutex with a priority-10 thread, PTHREAD_PRIO_NONE",
+    "rep": 1,
+    "idle": {
+      "verdict": "FAIL",
+      "failed": [
+        "deadline"
+      ],
+      "pass": {
+        "deadline": false,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "1 missed of 9500 (late 1, skipped 0, errors 0)",
+        "p99 latency": "4.8 us",
+        "control law": "0 of 9448 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10007 ticks (highest controller thread seen running: 10); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 1,
+      "p99_us": 4.7662989372184885,
+      "stalled_samples": 51,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/bug_mutex_no_inherit/evidence/20261124-143410",
+      "run_id": "20261124-143410",
+      "error": null
+    },
+    "load": {
+      "verdict": "FAIL",
+      "failed": [
+        "deadline"
+      ],
+      "pass": {
+        "deadline": false,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "793 missed of 9500 (late 20, skipped 66, errors 0, unexplained by stalls 707)",
+        "p99 latency": "3.7 us",
+        "control law": "0 of 8676 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10007 ticks (highest controller thread seen running: 10); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 793,
+      "p99_us": 3.692455960922748,
+      "stalled_samples": 50,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/bug_mutex_no_inherit/evidence/20261124-143429",
+      "run_id": "20261124-143429",
+      "error": null
+    },
+    "G1": true,
+    "G2": false,
+    "G3": false,
+    "Referee": "FAIL"
+  },
+  {
+    "name": "bug_mutex_no_inherit",
+    "kind": "bug",
+    "desc": "shares a mutex with a priority-10 thread, PTHREAD_PRIO_NONE",
+    "rep": 2,
+    "idle": {
+      "verdict": "PASS",
+      "failed": [],
+      "pass": {
+        "deadline": true,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "0 missed of 9500 (late 0, skipped 0, errors 0)",
+        "p99 latency": "4.6 us",
+        "control law": "0 of 9455 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10007 ticks (highest controller thread seen running: 10); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 0,
+      "p99_us": 4.647832274353122,
+      "stalled_samples": 45,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/bug_mutex_no_inherit/evidence/20261124-143448",
+      "run_id": "20261124-143448",
+      "error": null
+    },
+    "load": {
+      "verdict": "FAIL",
+      "failed": [
+        "deadline"
+      ],
+      "pass": {
+        "deadline": false,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "57 missed of 9500 (late 13, skipped 44, errors 0)",
+        "p99 latency": "3.3 us",
+        "control law": "0 of 9414 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10007 ticks (highest controller thread seen running: 10); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 57,
+      "p99_us": 3.2597439814244367,
+      "stalled_samples": 42,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/bug_mutex_no_inherit/evidence/20261124-143506",
+      "run_id": "20261124-143506",
+      "error": null
+    },
+    "G1": true,
+    "G2": true,
+    "G3": false,
+    "Referee": "FAIL"
+  },
+  {
+    "name": "bug_mutex_no_inherit",
+    "kind": "bug",
+    "desc": "shares a mutex with a priority-10 thread, PTHREAD_PRIO_NONE",
+    "rep": 3,
+    "idle": {
+      "verdict": "PASS",
+      "failed": [],
+      "pass": {
+        "deadline": true,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "0 missed of 9500 (late 0, skipped 0, errors 0)",
+        "p99 latency": "4.3 us",
+        "control law": "0 of 9449 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10007 ticks (highest controller thread seen running: 10); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 0,
+      "p99_us": 4.338584310744275,
+      "stalled_samples": 51,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/bug_mutex_no_inherit/evidence/20261124-143525",
+      "run_id": "20261124-143525",
+      "error": null
+    },
+    "load": {
+      "verdict": "FAIL",
+      "failed": [
+        "deadline"
+      ],
+      "pass": {
+        "deadline": false,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "86 missed of 9500 (late 21, skipped 61, errors 0, unexplained by stalls 4)",
+        "p99 latency": "15.8 us",
+        "control law": "0 of 9373 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10007 ticks (highest controller thread seen running: 10); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 86,
+      "p99_us": 15.761063514117827,
+      "stalled_samples": 59,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/bug_mutex_no_inherit/evidence/20261124-143544",
+      "run_id": "20261124-143544",
+      "error": null
+    },
+    "G1": true,
+    "G2": true,
+    "G3": false,
+    "Referee": "FAIL"
+  },
+  {
+    "name": "bug_work_after_reply",
+    "kind": "bug",
+    "desc": "replies, then does 150 us of bookkeeping in the same thread",
+    "rep": 1,
+    "idle": {
+      "verdict": "FAIL",
+      "failed": [
+        "p99 latency"
+      ],
+      "pass": {
+        "deadline": true,
+        "p99 latency": false,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "0 missed of 9500 (late 0, skipped 0, errors 0)",
+        "p99 latency": "189.4 us",
+        "control law": "0 of 9283 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10007 ticks (highest controller thread seen running: 40); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 0,
+      "p99_us": 189.3864513258725,
+      "stalled_samples": 217,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/bug_work_after_reply/evidence/20261124-143603",
+      "run_id": "20261124-143603",
+      "error": null
+    },
+    "load": {
+      "verdict": "FAIL",
+      "failed": [
+        "p99 latency"
+      ],
+      "pass": {
+        "deadline": true,
+        "p99 latency": false,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "0 missed of 9500 (late 0, skipped 0, errors 0)",
+        "p99 latency": "192.6 us",
+        "control law": "0 of 9097 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10007 ticks (highest controller thread seen running: 40); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 0,
+      "p99_us": 192.58358141352446,
+      "stalled_samples": 402,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/bug_work_after_reply/evidence/20261124-143622",
+      "run_id": "20261124-143622",
+      "error": null
+    },
+    "G1": true,
+    "G2": false,
+    "G3": false,
+    "Referee": "FAIL"
+  },
+  {
+    "name": "bug_work_after_reply",
+    "kind": "bug",
+    "desc": "replies, then does 150 us of bookkeeping in the same thread",
+    "rep": 2,
+    "idle": {
+      "verdict": "FAIL",
+      "failed": [
+        "deadline",
+        "p99 latency"
+      ],
+      "pass": {
+        "deadline": false,
+        "p99 latency": false,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "1 missed of 9500 (late 0, skipped 1, errors 0)",
+        "p99 latency": "192.7 us",
+        "control law": "0 of 9287 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10007 ticks (highest controller thread seen running: 40); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 1,
+      "p99_us": 192.73820539532886,
+      "stalled_samples": 211,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/bug_work_after_reply/evidence/20261124-143641",
+      "run_id": "20261124-143641",
+      "error": null
+    },
+    "load": {
+      "verdict": "FAIL",
+      "failed": [
+        "deadline",
+        "p99 latency"
+      ],
+      "pass": {
+        "deadline": false,
+        "p99 latency": false,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "2 missed of 9500 (late 2, skipped 0, errors 0)",
+        "p99 latency": "192.2 us",
+        "control law": "0 of 9147 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10007 ticks (highest controller thread seen running: 40); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 2,
+      "p99_us": 192.1570426348206,
+      "stalled_samples": 350,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/bug_work_after_reply/evidence/20261124-143700",
+      "run_id": "20261124-143700",
+      "error": null
+    },
+    "G1": true,
+    "G2": false,
+    "G3": false,
+    "Referee": "FAIL"
+  },
+  {
+    "name": "bug_work_after_reply",
+    "kind": "bug",
+    "desc": "replies, then does 150 us of bookkeeping in the same thread",
+    "rep": 3,
+    "idle": {
+      "verdict": "FAIL",
+      "failed": [
+        "deadline",
+        "p99 latency"
+      ],
+      "pass": {
+        "deadline": false,
+        "p99 latency": false,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "1 missed of 9500 (late 1, skipped 0, errors 0)",
+        "p99 latency": "192.2 us",
+        "control law": "0 of 9149 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10007 ticks (highest controller thread seen running: 40); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 1,
+      "p99_us": 192.21289540391348,
+      "stalled_samples": 351,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/bug_work_after_reply/evidence/20261124-143718",
+      "run_id": "20261124-143718",
+      "error": null
+    },
+    "load": {
+      "verdict": "FAIL",
+      "failed": [
+        "deadline",
+        "p99 latency"
+      ],
+      "pass": {
+        "deadline": false,
+        "p99 latency": false,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "1 missed of 9500 (late 1, skipped 0, errors 0)",
+        "p99 latency": "191.1 us",
+        "control law": "0 of 9236 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10007 ticks (highest controller thread seen running: 40); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 1,
+      "p99_us": 191.07349891441928,
+      "stalled_samples": 264,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/bug_work_after_reply/evidence/20261124-143737",
+      "run_id": "20261124-143737",
+      "error": null
+    },
+    "G1": true,
+    "G2": false,
+    "G3": false,
+    "Referee": "FAIL"
+  },
+  {
+    "name": "bug_housekeeping_above_plant",
+    "kind": "bug",
+    "desc": "a priority-50 thread busy 60 us every 10 ms",
+    "rep": 1,
+    "idle": {
+      "verdict": "FAIL",
+      "failed": [
+        "prio ceiling"
+      ],
+      "pass": {
+        "deadline": true,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": false,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "0 missed of 9500 (late 0, skipped 0, errors 0)",
+        "p99 latency": "3.1 us",
+        "control law": "0 of 9437 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "910 of 10007 ticks had a thread of the controller's user running above the plant (max 50); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 0,
+      "p99_us": 3.050443078297536,
+      "stalled_samples": 62,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/bug_housekeeping_above_plant/evidence/20261124-143756",
+      "run_id": "20261124-143756",
+      "error": null
+    },
+    "load": {
+      "verdict": "FAIL",
+      "failed": [
+        "prio ceiling"
+      ],
+      "pass": {
+        "deadline": true,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": false,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "0 missed of 9500 (late 0, skipped 0, errors 0)",
+        "p99 latency": "2.9 us",
+        "control law": "0 of 9460 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "912 of 10007 ticks had a thread of the controller's user running above the plant (max 50); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 0,
+      "p99_us": 2.8761236463393174,
+      "stalled_samples": 39,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/bug_housekeeping_above_plant/evidence/20261124-143815",
+      "run_id": "20261124-143815",
+      "error": null
+    },
+    "G1": true,
+    "G2": true,
+    "G3": true,
+    "Referee": "FAIL"
+  },
+  {
+    "name": "bug_housekeeping_above_plant",
+    "kind": "bug",
+    "desc": "a priority-50 thread busy 60 us every 10 ms",
+    "rep": 2,
+    "idle": {
+      "verdict": "FAIL",
+      "failed": [
+        "prio ceiling"
+      ],
+      "pass": {
+        "deadline": true,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": false,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "0 missed of 9500 (late 0, skipped 0, errors 0)",
+        "p99 latency": "14.3 us",
+        "control law": "0 of 9457 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "910 of 10007 ticks had a thread of the controller's user running above the plant (max 50); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 0,
+      "p99_us": 14.318298299866667,
+      "stalled_samples": 42,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/bug_housekeeping_above_plant/evidence/20261124-143833",
+      "run_id": "20261124-143833",
+      "error": null
+    },
+    "load": {
+      "verdict": "FAIL",
+      "failed": [
+        "prio ceiling"
+      ],
+      "pass": {
+        "deadline": true,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": false,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "0 missed of 9500 (late 0, skipped 0, errors 0)",
+        "p99 latency": "2.9 us",
+        "control law": "0 of 9459 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "910 of 10007 ticks had a thread of the controller's user running above the plant (max 50); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 0,
+      "p99_us": 2.9355039587432974,
+      "stalled_samples": 40,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/bug_housekeeping_above_plant/evidence/20261124-143852",
+      "run_id": "20261124-143852",
+      "error": null
+    },
+    "G1": true,
+    "G2": true,
+    "G3": true,
+    "Referee": "FAIL"
+  },
+  {
+    "name": "bug_housekeeping_above_plant",
+    "kind": "bug",
+    "desc": "a priority-50 thread busy 60 us every 10 ms",
+    "rep": 3,
+    "idle": {
+      "verdict": "FAIL",
+      "failed": [
+        "prio ceiling"
+      ],
+      "pass": {
+        "deadline": true,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": false,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "0 missed of 9500 (late 0, skipped 0, errors 0)",
+        "p99 latency": "3.3 us",
+        "control law": "0 of 9463 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "911 of 10007 ticks had a thread of the controller's user running above the plant (max 50); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 0,
+      "p99_us": 3.312363169148756,
+      "stalled_samples": 36,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/bug_housekeeping_above_plant/evidence/20261124-143911",
+      "run_id": "20261124-143911",
+      "error": null
+    },
+    "load": {
+      "verdict": "FAIL",
+      "failed": [
+        "prio ceiling"
+      ],
+      "pass": {
+        "deadline": true,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": false,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "0 missed of 9500 (late 0, skipped 0, errors 0)",
+        "p99 latency": "15.4 us",
+        "control law": "0 of 9466 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "910 of 10007 ticks had a thread of the controller's user running above the plant (max 50); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 0,
+      "p99_us": 15.433589910068156,
+      "stalled_samples": 34,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/bug_housekeeping_above_plant/evidence/20261124-143930",
+      "run_id": "20261124-143930",
+      "error": null
+    },
+    "G1": true,
+    "G2": true,
+    "G3": true,
+    "Referee": "FAIL"
+  },
+  {
+    "name": "bug_stale_reply",
+    "kind": "bug",
+    "desc": "replies at once with u from a polling loop",
+    "rep": 1,
+    "idle": {
+      "verdict": "FAIL",
+      "failed": [
+        "control law"
+      ],
+      "pass": {
+        "deadline": true,
+        "p99 latency": true,
+        "control law": false,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "0 missed of 9500 (late 0, skipped 0, errors 0)",
+        "p99 latency": "3.4 us",
+        "control law": "9466 of 9467 replies off, max err 3.59",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10007 ticks (highest controller thread seen running: 10); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 0,
+      "p99_us": 3.3887932742231857,
+      "stalled_samples": 33,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/bug_stale_reply/evidence/20261124-143948",
+      "run_id": "20261124-143948",
+      "error": null
+    },
+    "load": {
+      "verdict": "FAIL",
+      "failed": [
+        "deadline",
+        "control law"
+      ],
+      "pass": {
+        "deadline": false,
+        "p99 latency": true,
+        "control law": false,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "1 missed of 9500 (late 1, skipped 0, errors 0)",
+        "p99 latency": "7.1 us",
+        "control law": "6694 of 9444 replies off, max err 20",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10007 ticks (highest controller thread seen running: 40); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 1,
+      "p99_us": 7.080955273203339,
+      "stalled_samples": 56,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/bug_stale_reply/evidence/20261124-144005",
+      "run_id": "20261124-144005",
+      "error": null
+    },
+    "G1": false,
+    "G2": false,
+    "G3": false,
+    "Referee": "FAIL"
+  },
+  {
+    "name": "bug_stale_reply",
+    "kind": "bug",
+    "desc": "replies at once with u from a polling loop",
+    "rep": 2,
+    "idle": {
+      "verdict": "FAIL",
+      "failed": [
+        "control law"
+      ],
+      "pass": {
+        "deadline": true,
+        "p99 latency": true,
+        "control law": false,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "0 missed of 9500 (late 0, skipped 0, errors 0)",
+        "p99 latency": "3.3 us",
+        "control law": "9447 of 9448 replies off, max err 3.58",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10007 ticks (highest controller thread seen running: 10); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 0,
+      "p99_us": 3.2623896389077824,
+      "stalled_samples": 51,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/bug_stale_reply/evidence/20261124-144024",
+      "run_id": "20261124-144024",
+      "error": null
+    },
+    "load": {
+      "verdict": "FAIL",
+      "failed": [
+        "control law"
+      ],
+      "pass": {
+        "deadline": true,
+        "p99 latency": true,
+        "control law": false,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "0 missed of 9500 (late 0, skipped 0, errors 0)",
+        "p99 latency": "3.3 us",
+        "control law": "9454 of 9454 replies off, max err 10.8",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10007 ticks (highest controller thread seen running: 10); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 0,
+      "p99_us": 3.2585681336540606,
+      "stalled_samples": 46,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/bug_stale_reply/evidence/20261124-144042",
+      "run_id": "20261124-144042",
+      "error": null
+    },
+    "G1": false,
+    "G2": false,
+    "G3": false,
+    "Referee": "FAIL"
+  },
+  {
+    "name": "bug_stale_reply",
+    "kind": "bug",
+    "desc": "replies at once with u from a polling loop",
+    "rep": 3,
+    "idle": {
+      "verdict": "FAIL",
+      "failed": [
+        "control law"
+      ],
+      "pass": {
+        "deadline": true,
+        "p99 latency": true,
+        "control law": false,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "0 missed of 9500 (late 0, skipped 0, errors 0)",
+        "p99 latency": "3.2 us",
+        "control law": "8317 of 9435 replies off, max err 3.58",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10007 ticks (highest controller thread seen running: 10); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 0,
+      "p99_us": 3.225644396083537,
+      "stalled_samples": 64,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/bug_stale_reply/evidence/20261124-144100",
+      "run_id": "20261124-144100",
+      "error": null
+    },
+    "load": {
+      "verdict": "FAIL",
+      "failed": [
+        "control law"
+      ],
+      "pass": {
+        "deadline": true,
+        "p99 latency": true,
+        "control law": false,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "0 missed of 9500 (late 0, skipped 0, errors 0)",
+        "p99 latency": "3.2 us",
+        "control law": "9442 of 9470 replies off, max err 19.3",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10007 ticks (highest controller thread seen running: 10); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 0,
+      "p99_us": 3.2209410050020337,
+      "stalled_samples": 28,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/bug_stale_reply/evidence/20261124-144118",
+      "run_id": "20261124-144118",
+      "error": null
+    },
+    "G1": false,
+    "G2": false,
+    "G3": false,
+    "Referee": "FAIL"
+  },
+  {
+    "name": "cheat_stall_hider",
+    "kind": "cheat",
+    "desc": "hides late replies by faking VM stalls with priority-63 hogs",
+    "rep": 1,
+    "idle": {
+      "verdict": "FAIL",
+      "failed": [
+        "deadline",
+        "prio ceiling"
+      ],
+      "pass": {
+        "deadline": false,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": false,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "61 missed of 9500 (late 5, skipped 50, errors 0, plant held up 6)",
+        "p99 latency": "3.1 us",
+        "control law": "0 of 9401 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "168 of 10007 ticks had a thread of the controller's user running above the plant (max 63); fork/spawn locked for the run; held the plant up 6x",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 61,
+      "p99_us": 3.133634308051627,
+      "stalled_samples": 38,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/cheat_stall_hider/evidence/20261124-144138",
+      "run_id": "20261124-144138",
+      "error": null
+    },
+    "load": {
+      "verdict": "FAIL",
+      "failed": [
+        "deadline",
+        "prio ceiling"
+      ],
+      "pass": {
+        "deadline": false,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": false,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "61 missed of 9500 (late 5, skipped 50, errors 0, plant held up 6)",
+        "p99 latency": "3.1 us",
+        "control law": "0 of 9412 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "168 of 10007 ticks had a thread of the controller's user running above the plant (max 63); fork/spawn locked for the run; held the plant up 6x",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 61,
+      "p99_us": 3.0798392725569324,
+      "stalled_samples": 27,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/cheat_stall_hider/evidence/20261124-144159",
+      "run_id": "20261124-144159",
+      "error": null
+    },
+    "G1": true,
+    "G2": false,
+    "G3": false,
+    "Referee": "FAIL"
+  },
+  {
+    "name": "cheat_stall_hider",
+    "kind": "cheat",
+    "desc": "hides late replies by faking VM stalls with priority-63 hogs",
+    "rep": 2,
+    "idle": {
+      "verdict": "FAIL",
+      "failed": [
+        "deadline",
+        "prio ceiling"
+      ],
+      "pass": {
+        "deadline": false,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": false,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "72 missed of 9500 (late 6, skipped 60, errors 0, plant held up 6)",
+        "p99 latency": "3.2 us",
+        "control law": "0 of 9406 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "168 of 10007 ticks had a thread of the controller's user running above the plant (max 63); fork/spawn locked for the run; held the plant up 6x",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 72,
+      "p99_us": 3.204773098159366,
+      "stalled_samples": 34,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/cheat_stall_hider/evidence/20261124-144217",
+      "run_id": "20261124-144217",
+      "error": null
+    },
+    "load": {
+      "verdict": "FAIL",
+      "failed": [
+        "deadline",
+        "prio ceiling"
+      ],
+      "pass": {
+        "deadline": false,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": false,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "50 missed of 9500 (late 4, skipped 40, errors 0, plant held up 6)",
+        "p99 latency": "3.1 us",
+        "control law": "0 of 9394 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "168 of 10007 ticks had a thread of the controller's user running above the plant (max 63); fork/spawn locked for the run; held the plant up 6x",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 50,
+      "p99_us": 3.1215818684052747,
+      "stalled_samples": 45,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/cheat_stall_hider/evidence/20261124-144236",
+      "run_id": "20261124-144236",
+      "error": null
+    },
+    "G1": true,
+    "G2": false,
+    "G3": false,
+    "Referee": "FAIL"
+  },
+  {
+    "name": "cheat_stall_hider",
+    "kind": "cheat",
+    "desc": "hides late replies by faking VM stalls with priority-63 hogs",
+    "rep": 3,
+    "idle": {
+      "verdict": "FAIL",
+      "failed": [
+        "deadline",
+        "prio ceiling"
+      ],
+      "pass": {
+        "deadline": false,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": false,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "50 missed of 9500 (late 4, skipped 40, errors 0, plant held up 6)",
+        "p99 latency": "3.3 us",
+        "control law": "0 of 9365 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "168 of 10007 ticks had a thread of the controller's user running above the plant (max 63); fork/spawn locked for the run; held the plant up 6x",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 50,
+      "p99_us": 3.2982529959042455,
+      "stalled_samples": 75,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/cheat_stall_hider/evidence/20261124-144254",
+      "run_id": "20261124-144254",
+      "error": null
+    },
+    "load": {
+      "verdict": "FAIL",
+      "failed": [
+        "deadline",
+        "prio ceiling"
+      ],
+      "pass": {
+        "deadline": false,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": false,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "60 missed of 9500 (late 5, skipped 50, errors 0, plant held up 5)",
+        "p99 latency": "2.9 us",
+        "control law": "0 of 9370 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "163 of 10007 ticks had a thread of the controller's user running above the plant (max 63); fork/spawn locked for the run; held the plant up 5x",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 60,
+      "p99_us": 2.9022862592301797,
+      "stalled_samples": 72,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/cheat_stall_hider/evidence/20261124-144313",
+      "run_id": "20261124-144313",
+      "error": null
+    },
+    "G1": true,
+    "G2": false,
+    "G3": false,
+    "Referee": "FAIL"
+  },
+  {
+    "name": "cheat_fork_hider",
+    "kind": "cheat",
+    "desc": "the same hogs in a forked child",
+    "rep": 1,
+    "idle": {
+      "verdict": "FAIL",
+      "failed": [
+        "deadline",
+        "prio ceiling"
+      ],
+      "pass": {
+        "deadline": false,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": false,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "72 missed of 9500 (late 6, skipped 60, errors 0, plant held up 6)",
+        "p99 latency": "3.7 us",
+        "control law": "0 of 9397 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "168 of 10007 ticks had a thread of the controller's user running above the plant (max 63); watched all 2 processes of the controller's user; fork/spawn locked for the run; held the plant up 6x",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 72,
+      "p99_us": 3.7168548021580463,
+      "stalled_samples": 43,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/cheat_fork_hider/evidence/20261124-144330",
+      "run_id": "20261124-144330",
+      "error": null
+    },
+    "load": {
+      "verdict": "FAIL",
+      "failed": [
+        "deadline",
+        "prio ceiling"
+      ],
+      "pass": {
+        "deadline": false,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": false,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "12 missed of 9500 (late 1, skipped 10, errors 0, plant held up 1)",
+        "p99 latency": "3.2 us",
+        "control law": "0 of 9438 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "56 of 10006 ticks had a thread of the controller's user running above the plant (max 63); watched all 2 processes of the controller's user; fork/spawn locked for the run; held the plant up 1x",
+        "monitor": "10006 ticks at prio 120; reply probe on"
+      },
+      "missed": 12,
+      "p99_us": 3.2303477871650403,
+      "stalled_samples": 42,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/cheat_fork_hider/evidence/20261124-144348",
+      "run_id": "20261124-144348",
+      "error": null
+    },
+    "G1": true,
+    "G2": false,
+    "G3": false,
+    "Referee": "FAIL"
+  },
+  {
+    "name": "cheat_fork_hider",
+    "kind": "cheat",
+    "desc": "the same hogs in a forked child",
+    "rep": 2,
+    "idle": {
+      "verdict": "FAIL",
+      "failed": [
+        "deadline",
+        "prio ceiling"
+      ],
+      "pass": {
+        "deadline": false,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": false,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "49 missed of 9500 (late 4, skipped 40, errors 0, plant held up 5)",
+        "p99 latency": "3.5 us",
+        "control law": "0 of 9377 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "168 of 10007 ticks had a thread of the controller's user running above the plant (max 63); watched all 2 processes of the controller's user; fork/spawn locked for the run; held the plant up 5x",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 49,
+      "p99_us": 3.4743361995180284,
+      "stalled_samples": 63,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/cheat_fork_hider/evidence/20261124-144406",
+      "run_id": "20261124-144406",
+      "error": null
+    },
+    "load": {
+      "verdict": "FAIL",
+      "failed": [
+        "deadline",
+        "prio ceiling"
+      ],
+      "pass": {
+        "deadline": false,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": false,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "72 missed of 9500 (late 6, skipped 60, errors 0, plant held up 6)",
+        "p99 latency": "3.3 us",
+        "control law": "0 of 9404 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "168 of 10007 ticks had a thread of the controller's user running above the plant (max 63); watched all 2 processes of the controller's user; fork/spawn locked for the run; held the plant up 6x",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 72,
+      "p99_us": 3.323239761024732,
+      "stalled_samples": 36,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/cheat_fork_hider/evidence/20261124-144424",
+      "run_id": "20261124-144424",
+      "error": null
+    },
+    "G1": true,
+    "G2": false,
+    "G3": false,
+    "Referee": "FAIL"
+  },
+  {
+    "name": "cheat_fork_hider",
+    "kind": "cheat",
+    "desc": "the same hogs in a forked child",
+    "rep": 3,
+    "idle": {
+      "verdict": "FAIL",
+      "failed": [
+        "deadline",
+        "prio ceiling"
+      ],
+      "pass": {
+        "deadline": false,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": false,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "60 missed of 9500 (late 5, skipped 50, errors 0, plant held up 5)",
+        "p99 latency": "3.1 us",
+        "control law": "0 of 9392 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "168 of 10007 ticks had a thread of the controller's user running above the plant (max 63); watched all 2 processes of the controller's user; fork/spawn locked for the run; held the plant up 5x",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 60,
+      "p99_us": 3.1124690481848623,
+      "stalled_samples": 47,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/cheat_fork_hider/evidence/20261124-144443",
+      "run_id": "20261124-144443",
+      "error": null
+    },
+    "load": {
+      "verdict": "FAIL",
+      "failed": [
+        "deadline",
+        "prio ceiling"
+      ],
+      "pass": {
+        "deadline": false,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": false,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "50 missed of 9500 (late 4, skipped 40, errors 0, plant held up 6)",
+        "p99 latency": "3.2 us",
+        "control law": "0 of 9388 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "168 of 10007 ticks had a thread of the controller's user running above the plant (max 63); watched all 2 processes of the controller's user; fork/spawn locked for the run; held the plant up 6x",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 50,
+      "p99_us": 3.1639123881388054,
+      "stalled_samples": 52,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/cheat_fork_hider/evidence/20261124-144501",
+      "run_id": "20261124-144501",
+      "error": null
+    },
+    "G1": true,
+    "G2": false,
+    "G3": false,
+    "Referee": "FAIL"
+  },
+  {
+    "name": "cheat_spawn_hider",
+    "kind": "cheat",
+    "desc": "forks a fresh hog child per burst",
+    "rep": 1,
+    "idle": {
+      "verdict": "FAIL",
+      "failed": [
+        "deadline"
+      ],
+      "pass": {
+        "deadline": false,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "6 missed of 9500 (late 6, skipped 0, errors 0)",
+        "p99 latency": "3.5 us",
+        "control law": "0 of 9446 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10007 ticks (no controller thread was running when sampled); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 6,
+      "p99_us": 3.4672811128957735,
+      "stalled_samples": 54,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/cheat_spawn_hider/evidence/20261124-144520",
+      "run_id": "20261124-144520",
+      "error": null
+    },
+    "load": {
+      "verdict": "FAIL",
+      "failed": [
+        "deadline"
+      ],
+      "pass": {
+        "deadline": false,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "6 missed of 9500 (late 6, skipped 0, errors 0)",
+        "p99 latency": "3.1 us",
+        "control law": "0 of 9461 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10007 ticks (no controller thread was running when sampled); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 6,
+      "p99_us": 3.121287906462681,
+      "stalled_samples": 38,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/cheat_spawn_hider/evidence/20261124-144539",
+      "run_id": "20261124-144539",
+      "error": null
+    },
+    "G1": true,
+    "G2": false,
+    "G3": false,
+    "Referee": "FAIL"
+  },
+  {
+    "name": "cheat_spawn_hider",
+    "kind": "cheat",
+    "desc": "forks a fresh hog child per burst",
+    "rep": 2,
+    "idle": {
+      "verdict": "FAIL",
+      "failed": [
+        "deadline"
+      ],
+      "pass": {
+        "deadline": false,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "6 missed of 9500 (late 6, skipped 0, errors 0)",
+        "p99 latency": "3.2 us",
+        "control law": "0 of 9417 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10007 ticks (no controller thread was running when sampled); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 6,
+      "p99_us": 3.173319170301812,
+      "stalled_samples": 83,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/cheat_spawn_hider/evidence/20261124-144557",
+      "run_id": "20261124-144557",
+      "error": null
+    },
+    "load": {
+      "verdict": "FAIL",
+      "failed": [
+        "deadline"
+      ],
+      "pass": {
+        "deadline": false,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "5 missed of 9500 (late 5, skipped 0, errors 0)",
+        "p99 latency": "3.2 us",
+        "control law": "0 of 9468 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10007 ticks (highest controller thread seen running: 40); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 5,
+      "p99_us": 3.1703795508758725,
+      "stalled_samples": 30,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/cheat_spawn_hider/evidence/20261124-144616",
+      "run_id": "20261124-144616",
+      "error": null
+    },
+    "G1": true,
+    "G2": false,
+    "G3": false,
+    "Referee": "FAIL"
+  },
+  {
+    "name": "cheat_spawn_hider",
+    "kind": "cheat",
+    "desc": "forks a fresh hog child per burst",
+    "rep": 3,
+    "idle": {
+      "verdict": "FAIL",
+      "failed": [
+        "deadline"
+      ],
+      "pass": {
+        "deadline": false,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "5 missed of 9500 (late 5, skipped 0, errors 0)",
+        "p99 latency": "3.2 us",
+        "control law": "0 of 9463 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10007 ticks (no controller thread was running when sampled); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 5,
+      "p99_us": 3.1639123881388054,
+      "stalled_samples": 37,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/cheat_spawn_hider/evidence/20261124-144633",
+      "run_id": "20261124-144633",
+      "error": null
+    },
+    "load": {
+      "verdict": "FAIL",
+      "failed": [
+        "deadline"
+      ],
+      "pass": {
+        "deadline": false,
+        "p99 latency": true,
+        "control law": true,
+        "no crash": true,
+        "prio ceiling": true,
+        "monitor": true
+      },
+      "measured": {
+        "deadline": "6 missed of 9500 (late 6, skipped 0, errors 0)",
+        "p99 latency": "3.1 us",
+        "control law": "0 of 9469 replies off, max err 0",
+        "no crash": "controller alive at end",
+        "prio ceiling": "never above the plant in 10007 ticks (no controller thread was running when sampled); fork/spawn locked for the run",
+        "monitor": "10007 ticks at prio 120; reply probe on"
+      },
+      "missed": 6,
+      "p99_us": 3.107471695160765,
+      "stalled_samples": 30,
+      "evidence": "/mnt/d/dev/referee/work/bench-20261124-142054/cheat_spawn_hider/evidence/20261124-144652",
+      "run_id": "20261124-144652",
+      "error": null
+    },
+    "G1": true,
+    "G2": false,
+    "G3": false,
+    "Referee": "FAIL"
+  }
+]

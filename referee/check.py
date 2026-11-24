@@ -65,11 +65,23 @@ def load_spec(project: Path, spec_path: Path | None = None) -> dict:
     if not f.exists():
         raise CheckError(f"spec not found: {f}")
     with f.open("rb") as fh:
-        return _merge(DEFAULTS, tomllib.load(fh))
+        return _validate(_merge(DEFAULTS, tomllib.load(fh)))
 
 
 def load_spec_bytes(data: bytes) -> dict:
-    return _merge(DEFAULTS, tomllib.loads(data.decode()))
+    return _validate(_merge(DEFAULTS, tomllib.loads(data.decode())))
+
+
+def _validate(spec: dict) -> dict:
+    """Reject specs the plant can't run, up front and by name (the plant would only print
+    its usage text and the run would fail as 'measurements incomplete')."""
+    rt = spec["realtime_loop"]
+    if not 50 <= float(rt["deadline_us"]) <= 1e6:
+        raise CheckError(f"realtime_loop.deadline_us = {rt['deadline_us']}: must be 50 to 1000000 "
+                         "(below 50 us the reply probe, every deadline/4 at priority 120, can swamp the plant's CPU)")
+    if not 0 < float(rt["rate_hz"]) <= 20000:
+        raise CheckError(f"realtime_loop.rate_hz = {rt['rate_hz']}: must be above 0 and at most 20000")
+    return spec
 
 
 # The build is the one place where content the agent wrote (Makefile, build scripts)
@@ -342,7 +354,7 @@ def _analyze(ev: Path, spec: dict) -> dict:
     # pause-free latency. Without this, a short VM pause inside a multi-second block
     # would excuse the whole block as one "stalled sample". The monitor only records pauses
     # longer than the stall threshold, so up to that much unexplained time per excused
-    # sample is still given the benefit of the doubt (bounded by the 0.5% stall budget).
+    # sample is still given the benefit of the doubt (bounded by the stall budget, max_stall_fraction).
     charged_late = charged_skipped = 0
     if attribution == "monitor":
         g_start = [a for a, _ in mon_gaps]
@@ -371,7 +383,7 @@ def _analyze(ev: Path, spec: dict) -> dict:
                 charged_skipped += min(jskip(r), max(0, int((q1 - q0 - paused(q0, q1) - thr_cyc) // p_cyc)))
     missed = min(expected, late + errors + skipped + missing_tail + len(preempted) + charged_late + charged_skipped)
     stall_frac = stalled / expected if expected else 0.0
-    max_stall = float(rt.get("max_stall_fraction", 0.005))
+    max_stall = float(rt.get("max_stall_fraction", 0.01))  # see docs/how-it-works.md
 
     diffs = [abs(float(r["u_reply"]) - float(r["u_ref"])) for r in ok]
     bad_model = sum(1 for d in diffs if not d <= model["tolerance"])
@@ -379,6 +391,7 @@ def _analyze(ev: Path, spec: dict) -> dict:
 
     stats = {"judged_periods": expected, "replies": len(ok), "late": late, "skipped": skipped,
              "errors": errors, "missing_tail": missing_tail, "missed": missed,
+             "over_p99_limit": sum(1 for v in lat if v > rt["p99_latency_us"]),
              "charged_in_excused": charged_late + charged_skipped,
              "latency_us": {"p50": _pct(lat, 50), "p99": _pct(lat, 99), "p999": _pct(lat, 99.9),
                             "max": lat[-1] if lat else math.nan},
@@ -694,6 +707,38 @@ def _build_in_copy(project: Path, spec: dict, run_id: str, log) -> tuple[subproc
         shutil.rmtree(bdir, ignore_errors=True)
 
 
+def decide(checks: list, st: dict, p99_limit_us: float) -> tuple[str, str | None]:
+    """Verdict from the checks and stats: PASS, FAIL or INCONCLUSIVE (too noisy to judge
+    timing). Returns (verdict, noise_excuse note or None). Pure, so it is unit-tested."""
+    noisy = st.get("stall_fraction", 0) > st.get("max_stall_fraction", 1)
+    failed = [c for c in checks if not c["pass"] and not c.get("referee_side")]
+    referee_broken = any(not c["pass"] and c.get("referee_side") for c in checks)
+    timing_only = all(c["name"] in TIMING_CHECKS for c in failed)
+    excuse = None
+    if (noisy or referee_broken) and timing_only and failed:
+        # Noise, or a Referee-side problem, only excuses failures it could plausibly have
+        # caused: not thousands of misses from a few dozen stalls, not a p99 far past the
+        # limit, not most clean replies over the p99 limit. (A blatantly slow controller can
+        # itself overflow the monitor's probe log, so "Referee broke" is never a free pass.
+        # A controller whose replies sit just under the deadline collects many probe-excused
+        # samples, so excused samples alone must not buy it an INCONCLUSIVE.)
+        p99 = (st.get("latency_us") or {}).get("p99", 0)
+        budget = max(10, 3 * st.get("stalled_samples", 0))
+        if (st.get("missed", 0) > budget or st.get("over_p99_limit", 0) > budget
+                or p99 > 2 * p99_limit_us):
+            noisy = referee_broken = False
+            excuse = "rejected: failures far larger than the target noise"
+    if not checks:
+        return "FAIL", excuse
+    if failed and not ((noisy or referee_broken) and timing_only):
+        return "FAIL", excuse
+    if noisy or referee_broken:
+        # Too much of the run was a stalled target: timing can't be attributed to the
+        # controller either way. Non-timing failures above still give FAIL.
+        return "INCONCLUSIVE", excuse
+    return "PASS", excuse
+
+
 def run_check(project: Path, duration: float | None = None, no_load: bool = False, log=print,
               spec_path: Path | None = None, ev: Path | None = None, sign: bool = True,
               spec: dict | None = None) -> dict:
@@ -719,33 +764,11 @@ def run_check(project: Path, duration: float | None = None, no_load: bool = Fals
     (ev / "spec.json").write_text(json.dumps(spec, indent=2))
 
     def finish(analysis: dict) -> dict:
-        checks = analysis["checks"]
         result.update(analysis)
-        st = analysis.get("stats") or {}
-        noisy = st.get("stall_fraction", 0) > st.get("max_stall_fraction", 1)
-        failed = [c for c in checks if not c["pass"] and not c.get("referee_side")]
-        referee_broken = any(not c["pass"] and c.get("referee_side") for c in checks)
-        timing_only = all(c["name"] in TIMING_CHECKS for c in failed)
-        if (noisy or referee_broken) and timing_only and failed:
-            # Noise, or a Referee-side problem, only excuses failures it could plausibly
-            # have caused: not thousands of misses from a few dozen stalls, not a p99 far
-            # past the limit. (A blatantly slow controller can itself overflow the monitor's
-            # probe log, so "Referee broke" is never a free pass either.)
-            lim = spec["realtime_loop"]["p99_latency_us"]
-            p99 = (st.get("latency_us") or {}).get("p99", 0)
-            if st.get("missed", 0) > max(10, 3 * st.get("stalled_samples", 0)) or p99 > 2 * lim:
-                noisy = referee_broken = False
-                result["noise_excuse"] = "rejected: failures far larger than the target noise"
-        if not checks:
-            result["verdict"] = "FAIL"
-        elif failed and not ((noisy or referee_broken) and timing_only):
-            result["verdict"] = "FAIL"
-        elif noisy or referee_broken:
-            # Too much of the run was a stalled target: timing can't be attributed to the
-            # controller either way. Non-timing failures above still give FAIL.
-            result["verdict"] = "INCONCLUSIVE"
-        else:
-            result["verdict"] = "PASS"
+        result["verdict"], excuse = decide(analysis["checks"], analysis.get("stats") or {},
+                                           spec["realtime_loop"]["p99_latency_us"])
+        if excuse:
+            result["noise_excuse"] = excuse
         if result["verdict"] == "PASS" and not (result.get("target") or {}).get("hardened"):
             # A target where the code under test could have become root proves nothing.
             result["verdict"] = "INCONCLUSIVE"

@@ -24,13 +24,15 @@ def cmd_check(a) -> int:
 
 
 def cmd_agent(a) -> int:
-    from .agent import AgentError, ClaudeBackend, ReplayBackend, format_timeline, run_agent
+    from .agent import AgentError, ClaudeBackend, CodexBackend, ReplayBackend, format_timeline, run_agent
     if a.agent == "claude":
         backend = ClaudeBackend(max_turns=a.max_turns, model=a.model)
+    elif a.agent == "codex":
+        backend = CodexBackend(model=a.model, effort=a.effort)
     elif a.agent.startswith("replay:"):
         backend = ReplayBackend(Path(a.agent.split(":", 1)[1]).resolve())
     else:
-        print("referee: --agent must be 'claude' or 'replay:<dir>'", file=sys.stderr)
+        print("referee: --agent must be 'claude', 'codex' or 'replay:<dir>'", file=sys.stderr)
         return 2
     project = Path(a.project)
     task = Path(a.task) if a.task else project / "TASK.md"
@@ -119,12 +121,13 @@ def main(argv=None) -> int:
     g = sub.add_parser("agent", help="loop an AI agent: edit -> tamper guard -> check -> feedback")
     g.add_argument("--project", default=".")
     g.add_argument("--task", help="task file (default <project>/TASK.md)")
-    g.add_argument("--agent", default="claude", help="'claude' or 'replay:<dir>'")
+    g.add_argument("--agent", default="claude", help="'claude', 'codex' or 'replay:<dir>'")
     g.add_argument("--rounds", type=int, default=5)
     g.add_argument("--duration", type=float)
     g.add_argument("--no-load", action="store_true")
     g.add_argument("--max-turns", type=int, default=40)
     g.add_argument("--model")
+    g.add_argument("--effort", help="reasoning effort for Codex")
     g.set_defaults(fn=cmd_agent)
 
     rp = sub.add_parser("report", help="(re)write the HTML report for an evidence folder or agent pack")
